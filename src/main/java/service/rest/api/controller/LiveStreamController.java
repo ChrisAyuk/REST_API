@@ -22,7 +22,7 @@ public class LiveStreamController {
         this.streamRepo = streamRepo;
     }
 
-    // Get streams http://localhost:9000/streams
+    // Get all streams from http://localhost:9000/streams
     @GetMapping
     public List<LiveStream> listStreams(){
         return streamRepo.findAll();
