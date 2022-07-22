@@ -1,12 +1,9 @@
 package service.rest.api.model;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.time.LocalDateTime;
 
 public class MutableLiveStream {
-    
+
     private String id;
     private String title;
     private String description;
