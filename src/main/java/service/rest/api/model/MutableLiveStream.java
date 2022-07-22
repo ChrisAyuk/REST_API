@@ -11,8 +11,8 @@ public class MutableLiveStream {
     private String title;
     private String description;
     private String url;
-    private LocalDateTime startdate;
-    private LocalDateTime enddate;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
 
     public MutableLiveStream(){
 
@@ -46,18 +46,18 @@ public class MutableLiveStream {
         this.url = url;
     }
 
-    public LocalDateTime getStartdate() {
-        return startdate;
+    public LocalDateTime getStartDate() {
+        return startDate;
     }
-    public void setStartdate(LocalDateTime startdate) {
-        this.startdate = startdate;
+    public void setStartDate(LocalDateTime startDate) {
+        this.startDate = startDate;
     }
 
-    public LocalDateTime getEnddate() {
-        return enddate;
+    public LocalDateTime getEndDate() {
+        return endDate;
     }
-    public void setEnddate(LocalDateTime enddate) {
-        this.enddate = enddate;
+    public void setEndDate(LocalDateTime endDate) {
+        this.endDate = endDate;
     }
 
     @Override
@@ -71,8 +71,8 @@ public class MutableLiveStream {
         if (!getTitle().equals(that.getTitle())) return false;
         if (!getDescription().equals(that.getDescription())) return false;
         if (!getUrl().equals(that.getUrl())) return false;
-        if (!getStartdate().equals(that.getStartdate())) return false;
-        return getEnddate().equals(that.getEnddate());
+        if (!getStartDate().equals(that.getStartDate())) return false;
+        return getEndDate().equals(that.getEndDate());
     }
 
     @Override
@@ -81,8 +81,8 @@ public class MutableLiveStream {
         result = 31 * result + getTitle().hashCode();
         result = 31 * result + getDescription().hashCode();
         result = 31 * result + getUrl().hashCode();
-        result = 31 * result + getStartdate().hashCode();
-        result = 31 * result + getEnddate().hashCode();
+        result = 31 * result + getStartDate().hashCode();
+        result = 31 * result + getEndDate().hashCode();
         return result;
     }
 
@@ -93,8 +93,8 @@ public class MutableLiveStream {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", url='" + url + '\'' +
-                ", startdate=" + startdate +
-                ", enddate=" + enddate +
+                ", startdate=" + startDate +
+                ", enddate=" + endDate +
                 '}';
     }
 }
