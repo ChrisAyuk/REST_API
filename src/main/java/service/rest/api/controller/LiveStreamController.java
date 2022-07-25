@@ -31,10 +31,17 @@ public class LiveStreamController {
         return streamRepo.findById(id);
     }
 
-    // Post a streams to http://localhost:9000/streams
+    // Post a stream to http://localhost:9000/streams
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public LiveStream create(@RequestBody LiveStream stream) {
         return streamRepo.create(stream);
+    }
+
+    // Update a stream with id: {id} from http://localhost:9000/streams/{
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PutMapping("/{id}")
+    public void update(@RequestBody LiveStream stream, @PathVariable String id) {
+        streamRepo.update(stream,id);
     }
 }
