@@ -38,10 +38,17 @@ public class LiveStreamController {
         return streamRepo.create(stream);
     }
 
-    // Update a stream with id: {id} from http://localhost:9000/streams/{
+    // Update a stream with id: {id} from http://localhost:9000/streams/
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
     public void update(@RequestBody LiveStream stream, @PathVariable String id) {
         streamRepo.update(stream,id);
+    }
+
+    // Delete stream with id: {id} from http://localhost:9000/streams/
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable String id) {
+        streamRepo.delete(id);
     }
 }
