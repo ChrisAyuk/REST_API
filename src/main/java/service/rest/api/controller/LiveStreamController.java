@@ -31,6 +31,7 @@ public class LiveStreamController {
         return streamRepo.findById(id);
     }
 
+    // Post a streams to http://localhost:9000/streams
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public LiveStream create(@RequestBody LiveStream stream) {
