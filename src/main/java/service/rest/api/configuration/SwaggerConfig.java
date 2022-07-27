@@ -1,4 +1,4 @@
-package service.rest.api;
+package service.rest.api.configuration;
 
 import org.springframework.context.annotation.*;
 import springfox.documentation.builders.PathSelectors;
