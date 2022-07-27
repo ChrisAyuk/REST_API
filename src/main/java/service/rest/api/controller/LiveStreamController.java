@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import service.rest.api.model.LiveStream;
 import service.rest.api.repository.LiveStreamRepo;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -34,7 +35,7 @@ public class LiveStreamController {
     // Post a stream to http://localhost:9000/streams
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public LiveStream create(@RequestBody LiveStream stream) {
+    public LiveStream create(@Valid @RequestBody LiveStream stream) {
         return streamRepo.create(stream);
     }
 
